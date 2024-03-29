@@ -1,0 +1,24 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EMS.Api/bin/Debug/netcoreapp3.1
+/bin
+/obj
+/EMS.Application/bin/Debug/netcoreapp3.1
+/IdentityServer4.PhoneNumberAuth/bin
+/IdentityServer4.PhoneNumberAuth/obj
+/.vs
+/EMS.Api/obj
+/EMS.Api/Properties/PublishProfiles
+/EMS.Application/bin
+/EMS.Domain/bin
+/EMS.Domain/obj
+/EMS.Infrastructure.IOC/bin
+/EMS.Infrastructure.IOC/obj
+/EMS.Infrastructure.Persistence/bin
+/EMS.Infrastructure.Persistence/obj
+/EMS.Infrastructure.Shared/bin
+/EMS.Infrastructure.Shared/obj
+/EMS.Api/bin/Release/netcoreapp3.1
+/EMS.Application/obj

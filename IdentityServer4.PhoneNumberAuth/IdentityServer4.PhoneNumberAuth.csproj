@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+		<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+		<AllowUntrustedCertificate>True</AllowUntrustedCertificate>
+
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<LangVersion>default</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.App" />
+		<PackageReference Include="IdentityServer4" Version="2.3.2" />
+		<PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Polly" Version="7.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+	</ItemGroup>
+	<ItemGroup>
+		<DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="wwwroot\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Remove="wwwroot\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="wwwroot\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Remove="wwwroot\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Migrations\20180226214355_FirstMigration.cs" />
+		<Compile Remove="Migrations\20180226214355_FirstMigration.Designer.cs" />
+		<Compile Remove="Migrations\20201108185531_update-db.cs" />
+		<Compile Remove="Migrations\20201108185531_update-db.Designer.cs" />
+		<Compile Remove="Migrations\20210225192534_initial.cs" />
+		<Compile Remove="Migrations\20210225192534_initial.Designer.cs" />
+		<Compile Remove="Migrations\20210225194007_initial.cs" />
+		<Compile Remove="Migrations\20210225194007_initial.Designer.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="kestrel.pfx" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\EMS.Infrastructure.IOC\EMS.Infrastructure.IOC.csproj" />
+	</ItemGroup>
+</Project>

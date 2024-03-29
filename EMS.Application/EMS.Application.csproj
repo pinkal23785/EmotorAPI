@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ServiceContracts\ConfigServicesService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.11.8-alpha.0.7" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EMS.Domain\EMS.Domain.csproj" />
+    <ProjectReference Include="..\EMS.Infrastructure.Persistence\EMS.Infrastructure.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
